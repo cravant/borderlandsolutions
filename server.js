@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } from "discord.js";
-import { sendEmail } from ".src/email.js"; // you’ll make src/email.js
+import { sendEmail } from "./src/email.js"; // you’ll make src/email.js
 import dotenv from "dotenv";
 
 dotenv.config();

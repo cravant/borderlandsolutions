@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import { Client, GatewayIntentBits } from "discord.js";
+import { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } from "discord.js";
 import { sendEmail } from "./src/email.js"; // you’ll make src/email.js
 import dotenv from "dotenv";
 
@@ -28,15 +28,7 @@ app.post("/api/request", async (req, res) => {
       return res.status(400).json({ ok: false, error: "Missing fields" });
     }
 
-    // ---- TEMPORARY TEST: Send plain text instead of embed/buttons ----
-    const channel = await client.channels.fetch(process.env.DISCORD_CHANNEL_ID);
-
-    await channel.send(
-      `🗑️ New Junk Removal Request\n\n**Name:** ${name}\n**Email:** ${email}\n**Job Description:** ${description}`
-    );
-
-    /* 
-    // ---- ORIGINAL EMBED + BUTTONS ----
+    // Build embed for Discord
     const embed = new EmbedBuilder()
       .setTitle("🗑️ New Junk Removal Request")
       .addFields(
@@ -47,13 +39,15 @@ app.post("/api/request", async (req, res) => {
       .setColor(0x00ffcc)
       .setTimestamp();
 
+    // Build buttons
     const row = new ActionRowBuilder().addComponents(
       new ButtonBuilder().setCustomId(`accept_${email}`).setLabel("✅ Accept").setStyle(ButtonStyle.Success),
       new ButtonBuilder().setCustomId(`reject_${email}`).setLabel("❌ Reject").setStyle(ButtonStyle.Danger)
     );
 
+    // Send to channel
+    const channel = await client.channels.fetch(process.env.DISCORD_CHANNEL_ID);
     await channel.send({ embeds: [embed], components: [row] });
-    */
 
     res.json({ ok: true });
   } catch (err) {

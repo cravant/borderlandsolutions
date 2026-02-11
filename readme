@@ -1,0 +1,200 @@
+# Borderlands Solutions - Professional Junk Removal Website
+
+A complete, professional website for Borderlands Solutions, a junk removal and light hauling company based in Lindale, Texas.
+
+## Website Overview
+
+This is a fully functional, professional-grade website designed for a real local service business. The site emphasizes credibility, trustworthiness, and conversion, with a clean, industrial aesthetic that reflects the nature of the junk removal industry.
+
+## Files Included
+
+- `index.html` - Homepage with hero section, services overview, and trust signals
+- `services.html` - Detailed services page with comprehensive descriptions
+- `areas.html` - Service areas page covering all East Texas communities
+- `pricing.html` - Transparent pricing information page
+- `about.html` - About page with company values and approach
+- `contact.html` - Contact page with form and business information
+- `styles.css` - Complete stylesheet with responsive design
+- `script.js` - JavaScript for navigation and interactivity
+
+## Features
+
+### Design
+- Professional, contractor-grade aesthetic
+- Custom typography using Bebas Neue and Work Sans
+- Grounded color palette (dark greens, grays, black, white)
+- Fully responsive design for all devices
+- Clean, no-nonsense layouts
+- No emojis or playful elements
+
+### Functionality
+- Sticky navigation header
+- Mobile-responsive hamburger menu
+- Smooth scrolling
+- Scroll-triggered animations
+- Contact form ready for Formspree integration
+- Click-to-call phone numbers
+- SEO-friendly structure
+
+### Content
+- Clear service descriptions for all offerings
+- Detailed service area coverage
+- Transparent pricing information
+- Professional about page
+- Multiple call-to-action buttons throughout
+- Trust signals and value propositions
+
+## Setup Instructions
+
+### 1. Basic Setup
+Simply upload all files to your web hosting server. The website will work immediately as static HTML pages.
+
+### 2. Contact Form Setup
+The contact form is configured to use Formspree. To activate it:
+
+1. Go to https://formspree.io and create a free account
+2. Create a new form and get your form ID
+3. Open `contact.html` in a text editor
+4. Find the line: `<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">`
+5. Replace `YOUR_FORM_ID` with your actual Formspree form ID
+6. Save the file
+
+### 3. Customization Options
+
+#### Update Phone Number
+The phone number 972-740-7232 appears throughout the site. To change it:
+- Search and replace "972-740-7232" across all HTML files
+- Also search and replace "9727407232" (the tel: link format)
+
+#### Update Business Hours
+Edit the business hours in `contact.html` under the "Business Hours" section.
+
+#### Add Real Images
+Replace the SVG placeholder images with actual photos:
+- Service trucks
+- Team members working
+- Before/after shots of cleanouts
+- Professional headshots
+
+Recommended image locations:
+- Hero section background (index.html)
+- Service detail cards (services.html)
+- About page (about.html)
+
+#### Adjust Colors
+Colors are defined as CSS variables in `styles.css`:
+```css
+:root {
+    --color-primary: #1a2a1f;
+    --color-secondary: #2a3a2f;
+    --color-accent: #3d5a45;
+    --color-light: #f5f5f3;
+    --color-white: #ffffff;
+}
+```
+
+### 4. SEO Optimization
+
+#### Meta Tags
+Each page includes basic meta tags. Consider adding:
+- Open Graph tags for social media sharing
+- Twitter Card tags
+- Schema.org markup for local business
+
+#### Google Analytics
+Add your Google Analytics tracking code before the closing `</body>` tag on each page.
+
+#### Google Search Console
+Submit your sitemap to Google Search Console after going live.
+
+### 5. Performance Optimization
+
+#### Fonts
+Currently using Google Fonts. For better performance:
+- Consider self-hosting the fonts
+- Or use system fonts for faster load times
+
+#### Images
+When adding real images:
+- Optimize all images before upload (use tools like TinyPNG)
+- Use WebP format when possible
+- Add proper width/height attributes
+- Implement lazy loading for below-fold images
+
+## Browser Compatibility
+
+This website is compatible with:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Accessibility
+
+The site includes:
+- Semantic HTML structure
+- ARIA labels on interactive elements
+- Proper heading hierarchy
+- Keyboard navigation support
+- Sufficient color contrast
+
+## Service Areas
+
+The website covers these East Texas communities:
+- Lindale (headquarters)
+- Tyler
+- Mineola
+- Van
+- Alba
+- Emory
+- Hideaway
+- Bullard
+- Whitehouse
+
+## Contact Information
+
+Phone: 972-740-7232 (Call or Text)
+Location: Lindale, Texas
+Service: Junk Removal & Light Hauling
+
+## Notes for Formspree Form
+
+The contact form collects:
+- Full Name (required)
+- Phone Number (required)
+- Email Address (optional)
+- Property Location (required)
+- Service Needed (optional)
+- Project Details (optional)
+
+You can customize these fields in `contact.html` as needed.
+
+## Technical Specifications
+
+- Pure HTML, CSS, and JavaScript (no frameworks required)
+- Mobile-first responsive design
+- Breakpoints: 1024px, 768px, 480px
+- Grid-based layouts
+- Flexbox navigation
+- CSS animations and transitions
+
+## Future Enhancements
+
+Consider adding:
+- Online booking/scheduling system
+- Photo gallery of completed projects
+- Customer testimonials section
+- FAQ page
+- Blog for SEO content
+- Live chat integration
+- Before/after photo comparisons
+- Service area map
+
+## Support
+
+For questions about the website code or functionality, refer to the inline comments in the CSS and JavaScript files.
+
+---
+
+© 2025 Borderlands Solutions. All rights reserved.
